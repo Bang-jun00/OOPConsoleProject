@@ -9,10 +9,13 @@ namespace 안병준_OOPConsolerProject
 {
     public static class Game
     {
+        //게임 진행시 필요한 정보.
         private static Dictionary<string, Scene> sceneDic;
-        private static Scene cutScene;
+        private static Scene curScene;
 
         private static bool gameOver;
+        
+        
 
         public static void Run()
         {
@@ -20,15 +23,22 @@ namespace 안병준_OOPConsolerProject
             
             while (gameOver == false)
             {
-                
-                cutScene.Render();
-                cutScene.Input();
-                cutScene.Update();
-                cutScene.Result();
+                Console.Clear();
+                curScene.Render();
+                curScene.Input();
+                curScene.Update();
+                curScene.Result();
             }
+                
 
             End();
         }
+
+        public static void ChangeScene(string sceneName)
+        {
+            curScene = sceneDic[sceneName];
+        }
+
         /// <summary>
         /// 게임 시작 작업 진행
         /// </summary>
@@ -41,9 +51,12 @@ namespace 안병준_OOPConsolerProject
             //씬 설정
             sceneDic = new Dictionary<string, Scene>();
             sceneDic.Add("Title",new TitleScene());
-
+            sceneDic.Add("Prologue", new PrologueScene());
+            sceneDic.Add("Character", new CreatCharacterScene());
+            
+            
             //초기 씬을 타이틀로 설정
-            cutScene = sceneDic["Title"];
+            curScene = sceneDic["Title"];
             
         }
 

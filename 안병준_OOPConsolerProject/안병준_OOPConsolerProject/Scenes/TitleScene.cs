@@ -47,9 +47,13 @@ namespace 안병준_OOPConsolerProject.Scenes
                     Console.WriteLine("게임을 종료합니다.");
                     Environment.Exit(0);
                     break;
-
+                default:
+                    Console.WriteLine("");
+                    break;
             }
         }
-
     }
 }
+                
+
+
