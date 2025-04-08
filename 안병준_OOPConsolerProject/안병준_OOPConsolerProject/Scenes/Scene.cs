@@ -17,6 +17,13 @@ namespace 안병준_OOPConsolerProject.Scenes
         //Consolekey 변수 선언하기
         protected ConsoleKey key;
 
+        //몰입도를 위해서 시간차를 두고 텍스트가 나오게 하는 기능의 함수
+        public static void Print(string text)
+        {
+            Console.WriteLine(text);
+            Thread.Sleep(2000);
+        }
+
         public abstract void Render();
         public abstract void Input(); 
         public abstract void Update(); 

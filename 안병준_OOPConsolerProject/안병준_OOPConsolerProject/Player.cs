@@ -24,6 +24,8 @@ namespace 안병준_OOPConsolerProject
         public int Health { get; set; }
         public int AttackPower { get; set; }
 
+        public int Intelligent {  get; set; }
+
         public Player(string nickname, ClassType characterClass)
         {
             Nickname = nickname;
@@ -39,10 +41,13 @@ namespace 안병준_OOPConsolerProject
                 case ClassType.Warrior:
                     Health = 150;
                     AttackPower = 30;
+                    Intelligent = 10;
+                    
                     break;
                 case ClassType.Mage:
                     Health = 100;
-                    AttackPower = 50;
+                    AttackPower = 10;
+                    Intelligent = 30;
                     break;
             }
         }

@@ -14,9 +14,9 @@ namespace 안병준_OOPConsolerProject
         private static Scene curScene;
 
         private static bool gameOver;
-        
-        
 
+        
+       
         public static void Run()
         {
             Start();
@@ -33,6 +33,7 @@ namespace 안병준_OOPConsolerProject
 
             End();
         }
+        
 
         public static void ChangeScene(string sceneName)
         {
