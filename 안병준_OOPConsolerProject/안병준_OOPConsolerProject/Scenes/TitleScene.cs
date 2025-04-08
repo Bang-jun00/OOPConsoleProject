@@ -17,7 +17,7 @@ namespace 안병준_OOPConsolerProject.Scenes
             Console.WriteLine("                 |  _  || | ___) || || |_| |  _ < | | / ___ \\ ");
             Console.WriteLine("                 |_| |_|___|____/ |_| \\___/|_| \\_\\___/_/   \\_\\");
             Console.WriteLine("                                                               ");
-            Console.WriteLine("                             ◆ The Legend Begins ◆              ");
+            Console.WriteLine("                     ◆ The coexistence of good and evil ◆              ");
             Console.WriteLine("                                                               ");
             Console.WriteLine("                   Press [Enter] to start | Press [Q] to quit  ");
             Console.WriteLine("=============================================================================");
