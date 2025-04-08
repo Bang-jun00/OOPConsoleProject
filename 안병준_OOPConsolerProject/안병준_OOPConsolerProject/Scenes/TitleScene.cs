@@ -26,25 +26,29 @@ namespace 안병준_OOPConsolerProject.Scenes
         public override void Input()
         {
             key = Console.ReadKey(true).Key;
+        }
 
+        public override void Update()
+        {
+            
+        }
+           
+        public override void Result()
+        {
             switch (key)
             {
                 case ConsoleKey.Enter:
-                    Console.WriteLine("Historia의 세계로 이동합니다.");
+                    Console.WriteLine("Historia의 세계로 이동합니다...");
+                    Thread.Sleep(1500);
+                    Console.Clear();
+                    Game.ChangeScene("Prologue");
                     break;
-                case ConsoleKey.Q:Console.WriteLine("게임을 종료합니다.");
+                case ConsoleKey.Q:
+                    Console.WriteLine("게임을 종료합니다.");
                     Environment.Exit(0);
                     break;
 
-            }    
-        }
-        public override void Update()
-        {
-            throw new NotImplementedException();
-        }
-        public override void Result()
-        {
-            throw new NotImplementedException();
+            }
         }
 
     }
