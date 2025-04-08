@@ -41,13 +41,13 @@ namespace 안병준_OOPConsolerProject
                 case ClassType.Warrior:
                     Health = 150;
                     AttackPower = 30;
-                    Intelligent = 10;
+                    Intelligent = 15;
                     
                     break;
                 case ClassType.Mage:
                     Health = 100;
                     AttackPower = 10;
-                    Intelligent = 30;
+                    Intelligent = 35;
                     break;
             }
         }
