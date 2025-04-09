@@ -8,7 +8,7 @@ namespace 안병준_OOPConsolerProject.Scenes
 {
     public class CreatCharacterScene : Scene
     {
-        private string nickname;
+        private string nickName;
         private ClassType selectedClass = ClassType.None;
         private PlayerInform player;
         public override void Render()
@@ -21,8 +21,16 @@ namespace 안병준_OOPConsolerProject.Scenes
         {
             Console.Clear();
             Console.Write("모험가님의 여정을 시작 할 캐릭터의 닉네임을 입력하세요 : ");
-            nickname = Console.ReadLine();
-
+            
+            nickName = Console.ReadLine();
+            while(nickName =="" || nickName == " ")
+            {
+                Console.WriteLine("닉네은 비워둘 수 없습니다. 다시 입력해주세요.");
+                
+                Console.Write("모험가님의 여정을 시작 할 캐릭터의 닉네임을 입력하세요 : ");
+                nickName = Console.ReadLine();
+            }
+            
             while (selectedClass == ClassType.None)
             {
                 selectedClass = ChooseClass();
@@ -31,24 +39,29 @@ namespace 안병준_OOPConsolerProject.Scenes
                     Console.WriteLine("잘못된 선택입니다. 다시 입력해주세요.");
                 }
             }
-
+            
         }
 
         public override void Update()
         {
-            player = new PlayerInform(nickname, selectedClass);
+            player = new PlayerInform(nickName, selectedClass);
+            Game.playerInform = player;
         }
 
         public override void Result()
         {
             Console.WriteLine($"\n{player.Nickname} 모험가님의 캐릭터가 생성되었습니다!");
             Console.WriteLine($"직업: {player.CharacterClass}");
-            Console.WriteLine($"공격력: {player.AttackPower} | 체력: {player.Health}\n\n");
-            Console.WriteLine(" 성역 에이도스로 이동합니다. ");
+            Console.WriteLine($"공격력: {player.AttackPower} | 체력: {player.Health} | 지능:{player.Intelligent}\n\n");
+            Console.WriteLine("필드로 이동합니다.");
 
             Console.WriteLine("\n▶ 아무 키나 눌러 계속 진행하세요.");
             Console.ReadKey(true);
+            Game.ChangeScene("Field");
+            
         }
+            
+
         private ClassType ChooseClass()
         {
             Console.WriteLine("직업을 선택하세요 : ");
