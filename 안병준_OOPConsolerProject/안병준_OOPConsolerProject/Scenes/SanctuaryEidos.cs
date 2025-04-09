@@ -52,6 +52,7 @@ namespace 안병준_OOPConsolerProject.Scenes
                 switch(choice)
                 {
                     case "1":
+                        Console.Clear();
                         Print("당신은 조용한 성역의 도서관으로 발걸음을 옮겼습니다.");
                         Print("빛바랜 책장들 사이에 먼지가 자욱한 고서를 한 권 꺼내듭니다.");
                         Print("책에는 '노아'라는 이름이 자주 등장합니다... 그의 여정은 수수께끼로 가득 차 있엇죠.");
@@ -61,10 +62,11 @@ namespace 안병준_OOPConsolerProject.Scenes
                         Print($"체력         : {Game.playerInform.Health}");
                         Print($"공격력       : {Game.playerInform.AttackPower}");
                         Print($"지능         : {Game.playerInform.Intelligent}");
-                        Game.ChangeScene("");
+                        Game.ChangeScene("Field");
                         break;
                         
                     case "2":
+                        Console.Clear();
                         Print("훈련장의 모래바닥은 이미 수많은 전사들의 피와 땀을 먹은 듯 합니다.");
                         Print("당신은 무기를 집어 들고, 여러 동작을 반복하며 단련합니다.");
                         Print("시간이 지날수록 무기가 손에 익고, 몸은 점점 전투에 익숙해져 갑니다.");
@@ -74,9 +76,10 @@ namespace 안병준_OOPConsolerProject.Scenes
                         Print($"체력         : {Game.playerInform.Health}");
                         Print($"공격력       : {Game.playerInform.AttackPower}");
                         Print($"지능         : {Game.playerInform.Intelligent}");
-                        
+                        Game.ChangeScene("Field");
                         break;
                     case "3":
+                        Console.Clear();
                         Print("당신은 성소를 향해 무릎을 꿇습니다.");
                         Print("눈을 감는 순간, 따뜻한 빛이 몸을 감싸고, 지친 마음과 육신이 회복 되는 느낌을 받습니다.");
                         Print("성스러운 기운이 혈관을 타고 흐르며, 당신의 육체에 생기를 불어넣습니다.");
@@ -86,7 +89,7 @@ namespace 안병준_OOPConsolerProject.Scenes
                         Print($"체력         : {Game.playerInform.Health}");
                         Print($"공격력       : {Game.playerInform.AttackPower}");
                         Print($"지능         : {Game.playerInform.Intelligent}");
-
+                        Game.ChangeScene("Field");
                         break;
 
 
@@ -94,20 +97,9 @@ namespace 안병준_OOPConsolerProject.Scenes
                 }
             }
         }
-        
-        
-        
-        private void GameOver()
-        {
-            Console.Clear();
-            Console.WriteLine("   ____                       ___                 ");
-            Console.WriteLine("  / ___| __ _ _ __ ___   ___ / _ \\__   _____ _ __ ");
-            Console.WriteLine(" | |  _ / _` | '_ ` _ \\ / _ \\ | | \\ \\ / / _ \\ '__|");
-            Console.WriteLine(" | |_| | (_| | | | | | |  __/ |_| |\\ V /  __/ |   ");
-            Console.WriteLine("  \\____|\\__,_|_| |_| |_|\\___|\\___/  \\_/ \\___|_|   ");
-            Console.WriteLine("\n▶ [Enter]를 눌러 다시 도전합니다.");
-            Console.ReadKey(true);
-            Game.ChangeScene("Eidos");
-        }
     }
 }
+        
+        
+        
+        
