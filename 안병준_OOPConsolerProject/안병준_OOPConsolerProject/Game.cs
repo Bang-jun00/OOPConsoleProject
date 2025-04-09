@@ -13,6 +13,9 @@ namespace 안병준_OOPConsolerProject
         private static Dictionary<string, Scene> sceneDic;
         private static Scene curScene;
 
+        private static Player player;
+        public static Player Player { get { return player; } }
+        
         private static bool gameOver;
 
         
@@ -46,19 +49,36 @@ namespace 안병준_OOPConsolerProject
         
         private static void Start()
         {
+            //커서 깜빡이는 걸 숨기는 기능
+            Console.CursorVisible = false; 
+            
             //게임 설정
             gameOver = false;
 
+            //플레이어 설정
+            player = new Player();
+            
             //씬 설정
             sceneDic = new Dictionary<string, Scene>();
             sceneDic.Add("Title",new TitleScene());
             sceneDic.Add("Prologue", new PrologueScene());
             sceneDic.Add("Character", new CreatCharacterScene());
+            sceneDic.Add("Field", new FieldScene());
+            sceneDic.Add("Eidos", new SanctuaryEidos());
+            sceneDic.Add("Light", new SanctuaryOfLight());
+            sceneDic.Add("chaos", new BorderOfChaos());
+            sceneDic.Add("Abyss", new AbyssofTruth());
+            sceneDic.Add("Castle",new TheDevilKingCastle());
+            sceneDic.Add("Ending1",new EndingScene1());
+            sceneDic.Add("Ending2", new EndingScene2());
+            
             
             
             //초기 씬을 타이틀로 설정
             curScene = sceneDic["Title"];
+
             
+
         }
 
         /// <summary>
