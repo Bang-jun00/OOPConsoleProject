@@ -10,12 +10,24 @@ namespace 안병준_OOPConsolerProject
     public static class Game
     {
         //게임 진행시 필요한 정보.
+        
+        //장면
         private static Dictionary<string, Scene> sceneDic;
         private static Scene curScene;
 
-        private static Player player;
+        //플레이어 정보
+        
+
+        public static Player player;
         public static Player Player { get { return player; } }
         
+        public static PlayerInform playerInform;
+
+        
+       
+
+        
+
         private static bool gameOver;
 
         
@@ -42,6 +54,8 @@ namespace 안병준_OOPConsolerProject
         {
             curScene = sceneDic[sceneName];
         }
+
+       
 
         /// <summary>
         /// 게임 시작 작업 진행
