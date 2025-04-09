@@ -11,7 +11,7 @@ namespace 안병준_OOPConsolerProject
         public int x;
         public int y;
 
-        public Vector2(int x, int y) 
+        public Vector2(int y, int x) 
         { 
             this.x = x; 
             this.y = y; 

@@ -18,16 +18,16 @@ namespace 안병준_OOPConsolerProject.Scenes
             mapData = new string[]
             {
             "############################################################",
-            "#               A    #             ## ##                   #",
-            "#  ##               #             ## C ##                  #",
+            "#                    #             ## ##                   #",
+            "#  ##               #             ##   ##                  #",
             "#  ##              #             ##     ##                 #",
             "#   ## # # # # #  #             ##       ##                #",
             "#   ##                          ##       ##      ###########",
-            "#   ##                           ##     ##       ##   L   ##",
+            "#   ##                           ##     ##       ##       ##",
             "#   ##                                           ##       ##",
             "#   ##                                           ######   ##",
             "#   ##                  ##############                     #",
-            "#   ##                  ##    E     ##                     #",
+            "#   ##                  ##          ##                     #",
             "#   ##                  ##          ##                     #",
             "#   ##                  #####    #####                     #",
             "#     #     #                                              #",
@@ -35,7 +35,7 @@ namespace 안병준_OOPConsolerProject.Scenes
             "#       # #   #   #                                        #",
             "#        #     # # #                                       #",
             "#                   #                                      #",
-            "#              K     #                                   ★ #",
+            "#                    #                                     #",
             "############################################################"
             };
 
@@ -50,13 +50,16 @@ namespace 안병준_OOPConsolerProject.Scenes
                     map[y,x] = mapData[y][x] == '#'? false : true;
                 }
             }
-
+           
+            Game.Player.position = new Vector2(18, 56);
+            Game.Player.map = map;
         }
         
         public override void Render()
         {
             PrintMap();
             Console.WriteLine("E : Stage 1, L : Stage 2 , C : Stage 3, A : stage 4, K:Fianal Stage");
+            Game.Player.PrintPlayer();
         }
 
         public override void Input()
@@ -66,12 +69,12 @@ namespace 안병준_OOPConsolerProject.Scenes
 
         public override void Update()
         {
-            
+            Game.Player.Move(key);
         }
 
         public override void Result()
         {
-            throw new NotImplementedException();
+            
         }
 
         private void PrintMap()
