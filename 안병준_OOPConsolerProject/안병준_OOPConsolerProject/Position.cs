@@ -17,5 +17,7 @@ namespace 안병준_OOPConsolerProject
             this.y = y; 
         }
     }
+
+
          
 }

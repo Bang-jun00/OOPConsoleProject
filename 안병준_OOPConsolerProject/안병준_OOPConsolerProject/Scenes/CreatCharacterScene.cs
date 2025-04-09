@@ -52,7 +52,7 @@ namespace 안병준_OOPConsolerProject.Scenes
         {
             Console.WriteLine($"\n{player.Nickname} 모험가님의 캐릭터가 생성되었습니다!");
             Console.WriteLine($"직업: {player.CharacterClass}");
-            Console.WriteLine($"공격력: {player.AttackPower} | 체력: {player.Health} | 지능:{player.Intelligent}\n\n");
+            Console.WriteLine($"공격력: {player.AttackPower} | 체력: {player.Health}\n\n");
             Console.WriteLine("필드로 이동합니다.");
 
             Console.WriteLine("\n▶ 아무 키나 눌러 계속 진행하세요.");

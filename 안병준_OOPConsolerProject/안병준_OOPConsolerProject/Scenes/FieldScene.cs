@@ -74,7 +74,7 @@ namespace 안병준_OOPConsolerProject.Scenes
             }
             Console.SetCursorPosition(0, 20);
             Console.WriteLine("===================================================================");
-            Console.WriteLine("E : Stage 1, L : Stage 2 , C : Stage 3, A : stage 4, D:Fianal Stage");
+            Console.WriteLine("E : Stage 1, L : Stage 2 , C : Stage 3, A : stage 4, D:Final Stage");
             Game.Player.PrintPlayer();
         }
             

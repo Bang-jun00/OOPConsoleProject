@@ -80,7 +80,7 @@ namespace 안병준_OOPConsolerProject
             sceneDic.Add("Field", new FieldScene());
             sceneDic.Add("Eidos", new SanctuaryEidos());
             sceneDic.Add("Light", new SanctuaryOfLight());
-            sceneDic.Add("chaos", new BorderOfChaos());
+            sceneDic.Add("Chaos", new BorderOfChaos());
             sceneDic.Add("Abyss", new AbyssofTruth());
             sceneDic.Add("Castle",new TheDevilKingCastle());
             sceneDic.Add("Ending1",new EndingScene1());
@@ -98,9 +98,13 @@ namespace 안병준_OOPConsolerProject
         /// <summary>
         /// 게임의 마무리 진행 
         /// </summary>
-        private static void End()
+        public static void End()
         {
             gameOver = true;
+            Console.Clear();
+            Console.WriteLine("게임을 종료합니다");
+            Thread.Sleep(3500);
+            Environment.Exit(0);
         }
     }
 

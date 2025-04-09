@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace 안병준_OOPConsolerProject
 {
+    //직업 열거형
     public enum ClassType
     {
         None = 0,
@@ -20,7 +21,7 @@ namespace 안병준_OOPConsolerProject
         public int Health { get; set; }
         public int AttackPower { get; set; }
 
-        public int Intelligent { get; set; }
+       
 
         public PlayerInform(string nickName, ClassType characterClass)
         {
@@ -29,19 +30,20 @@ namespace 안병준_OOPConsolerProject
             SetStats();
         }
 
+        
         private void SetStats()
         {
             switch (CharacterClass)
             {
                 case ClassType.Warrior:
                     Health = 150;
-                    AttackPower = 30;
-                    Intelligent = 15;
+                    AttackPower = 25;
+                    
                     break;
                 case ClassType.Mage:
-                    Health = 100;
-                    AttackPower = 15;
-                    Intelligent = 30;
+                    Health = 140;
+                    AttackPower = 20;
+                    
                     break;
                 default:
                     Health = 0;

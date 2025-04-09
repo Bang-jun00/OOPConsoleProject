@@ -2,12 +2,13 @@
 
 namespace 안병준_OOPConsolerProject
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Game.Run();
-
         }
+        
+
     }
 }
