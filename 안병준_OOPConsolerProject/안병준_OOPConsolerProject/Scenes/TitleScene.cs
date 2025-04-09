@@ -8,6 +8,7 @@ namespace 안병준_OOPConsolerProject.Scenes
 {
     public class TitleScene : Scene
     {
+
         public override void Render()
         {
             Console.WriteLine("=============================================================================");
@@ -32,24 +33,28 @@ namespace 안병준_OOPConsolerProject.Scenes
         {
             
         }
-           
+
         public override void Result()
         {
-            switch (key)
+            while (true)
             {
-                case ConsoleKey.Enter:
-                    Console.WriteLine("Historia의 세계로 이동합니다...");
-                    Thread.Sleep(1500);
-                    Console.Clear();
-                    Game.ChangeScene("Prologue");
-                    break;
-                case ConsoleKey.Q:
-                    Console.WriteLine("게임을 종료합니다.");
-                    Environment.Exit(0);
-                    break;
-                default:
-                    Console.WriteLine("");
-                    break;
+                switch (key)
+                {
+                    case ConsoleKey.Enter:
+                        Console.WriteLine("Historia의 세계로 이동합니다...");
+                        Thread.Sleep(1500);
+                        Console.Clear();
+                        Game.ChangeScene("Prologue");
+                        return;
+                    case ConsoleKey.Q:
+                        Console.WriteLine("게임을 종료합니다.");
+                        Environment.Exit(0);
+                        return;
+                    default:
+                        Console.WriteLine("잘못된 입력입니다. 다시 선택해주세요");
+                        key = Console.ReadKey(true).Key;
+                        break;
+                }
             }
         }
     }

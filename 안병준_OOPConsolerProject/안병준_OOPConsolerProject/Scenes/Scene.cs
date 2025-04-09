@@ -21,7 +21,7 @@ namespace 안병준_OOPConsolerProject.Scenes
         public static void Print(string text)
         {
             Console.WriteLine(text);
-            Thread.Sleep(2000);
+            Thread.Sleep(1500);
         }
 
         public abstract void Render();

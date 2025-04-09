@@ -8,6 +8,7 @@ namespace 안병준_OOPConsolerProject.Scenes
 {
     public class SanctuaryOfLight : Scene
     {
+        
         public override void Render()
         {
             throw new NotImplementedException();
